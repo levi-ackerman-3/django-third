@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block header %}
+Welcome to my TO-DO app
+{% endblock header %}
+{% block body %}
+<div class="row">
+  <div class="col">
+    <div class="card" style="width: 18rem;">
+      <h2>Step 1:</h2>
+      <i class="icon fa fa-bars fa-4x inner-icon "></i>
+      <div class="card-body">
+        <h5 class="card-title">Nav bar</h5>
+        <p class="card-text">press this icon on  top left of the page</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card" style="width: 18rem;">
+      <h2>Step 2:</h2>
+      <i class="icon fa fa-bell-o fa-4x inner-icon"></i>
+      <div class="card-body">
+        <h5 class="card-title">Bell</h5>
+        <p class="card-text">press this icon for adding to-do events</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card" style="width: 18rem;">
+      <h2>Step 3:</h2>
+      <i class="icon fa fa-list-alt fa-4x inner-icon"></i>
+      <div class="card-body">
+        <h5 class="card-title">List</h5>
+        <p class="card-text">press this icon to view the to-do list</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}

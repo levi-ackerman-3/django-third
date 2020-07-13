@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block header %}
+List of events
+{% endblock header %}
+{% block body %}
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Tasks</th>
+      <th scope="col">Description</th>
+      <th scope="col">Added time</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for Tasks in tsk  %}
+    <tr>
+      <th scope="row">{{forloop.counter}}</th>
+      {% comment %} <td>{{Tasks.task | cut:"sleep"}}</td> {% endcomment %}
+      <td>{{Tasks.task}}</td>
+      <td>{{Tasks.description }}</td>
+      <td>{{Tasks.time}}</td>
+      <td><button type="button" class="btn btn-light"><a href="/list/{{Tasks.task}}">del</a></button></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock body %}
+

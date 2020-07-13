@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block header %}
+Add events here
+{% endblock header %}
+{% block body %}
+<form action="/todo/" method="POST">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="exampleFormControlInput1">TO-DO</label>
+    <input type="text" class="form-control" id="event_name" placeholder="event name" name="task">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Description</label>
+    <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+  </div>
+  <button type="submit" class="btn btn-success">Add</button>
+</form>
+{% endblock body %}
